@@ -44,8 +44,8 @@ def crea_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, fr
     plt.show()
 
 
-def escuchar_onda (y_data, rate=44100):
-    Audio (data=y_data, rate=rate)
+def escuchar_onda (y_data, frate=44100):
+    return Audio (data=y_data, rate=frate)
   
 
 
