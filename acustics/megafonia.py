@@ -45,8 +45,8 @@ def crea_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, fr
 
 
 def escuchar_onda (y_data, rate=44100):
-    audio_widget = Audio (data=y_data, rate=rate)
-    display(audio_widget)
+    Audio (data=y_data, rate=rate)
+  
 
 
 # Test de la función
