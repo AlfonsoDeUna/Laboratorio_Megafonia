@@ -48,7 +48,6 @@ def escuchar_onda (y_data):
     return Audio (data=y_data, rate=44100)
   
 
-
 # Test de la función
 #crea_onda1_y_onda2_alavez(2, 2, 0, 1, 5, 0)     
 
