@@ -20,7 +20,7 @@ def crear_onda(amplitud=2, frecuencia=2):
     plt.ylabel("Amplitud")
     plt.grid(True)
     plt.show()
-    return y
+  
 
 def crea_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
     # Generar los valores del tiempo (t)
