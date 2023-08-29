@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from IPython.display import Audio
 
-def crear_onda(amplitud, frecuencia):
+def crear_onda(amplitud=2, frecuencia=2):
     # Generar los valores del tiempo (t)
     t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
     
@@ -20,7 +20,7 @@ def crear_onda(amplitud, frecuencia):
     plt.ylabel("Amplitud")
     plt.grid(True)
     plt.show()
-    return y
+  
 
 def crea_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
     # Generar los valores del tiempo (t)
