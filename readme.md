@@ -16,11 +16,11 @@ conveniente.
 Las prácticas se realizarán en Google Colab para poder utilizar el código que he creado
 para poder realizar las prácticas. Hay que importarlo del siguiente modo.
 
-´´´python
+```python
 
 !wget https://raw.githubusercontent.com/AlfonsoDeUna/Laboratorio_Megafonia/main/acustics/megafonia.py
 
-´´´
+```
 
 ## Elementos del laboratorio
 
