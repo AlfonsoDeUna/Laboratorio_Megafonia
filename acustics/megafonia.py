@@ -5,6 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from IPython.display import Audio
 
+
+# Crea una onda y la visualiza
 def crear_onda(amplitud=2, frecuencia=2):
     # Generar los valores del tiempo (t)
     t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
@@ -21,6 +23,16 @@ def crear_onda(amplitud=2, frecuencia=2):
     plt.grid(True)
     plt.show()
     return y
+
+# Crea una onda y ya está
+def crear_onda(amplitud=2, frecuencia=2):
+    # Generar los valores del tiempo (t)
+    t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
+    
+    # Generar la onda sinusoidal usando la amplitud y frecuencia dadas
+    y = amplitud * np.sin(frecuencia * t)
+
+    return y
   
 
 def crea_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
@@ -36,16 +48,46 @@ def crea_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, fr
     plt.plot(t, y1, label=f"{frecuencia1} Hz, Amp={amplitud1}, Offset={offset1}")
     plt.plot(t, y2, linestyle='--', label=f"{frecuencia2} Hz, Amp={amplitud2}, Offset={offset2}")
     
-    plt.title("Dos Ondas Sinusoidales")
+    plt.title("Dos Ondas Puras")
     plt.xlabel("Tiempo")
     plt.ylabel("Amplitud")
     plt.legend()
     plt.grid(True)
     plt.show()
 
+def crea_y_suma_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
+    # Generar los valores del tiempo (t)
+    t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
+    
+    # Generar las dos ondas sinusoidales usando la amplitud, frecuencia y offset dados
+    y1 = amplitud1 * np.sin(frecuencia1 * t + offset1)
+    y2 = amplitud2 * np.sin(frecuencia2 * t + offset2)
+
+    # Plot
+    plt.figure(figsize=(10, 6))
+    plt.plot(t, y1+y2, label=f"{frecuencia1} Hz, Amp={amplitud1}, Offset={offset1}")
+    
+    
+    plt.title("Dos Ondas Puras")
+    plt.xlabel("Tiempo")
+    plt.ylabel("Amplitud")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
 def escuchar_onda (y_data):
     return Audio (data=y_data, rate=44100)
+
+
+def dibujar_onda(y_data):
+    t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
+    plt.figure(figsize=(10, 6))
+    plt.plot(t, y_data)
+    plt.title(f"Onda Sinusoidal de {frecuencia} Hz con Amplitud {amplitud}")
+    plt.xlabel("Tiempo")
+    plt.ylabel("Amplitud")
+    plt.grid(True)
+    plt.show()
   
 
 # Test de la función
