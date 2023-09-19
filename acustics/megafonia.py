@@ -76,7 +76,7 @@ def suma_dos_ondas_vis(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuenci
     plt.show()
 
 # Devuelve los puntos asociados a la función suma de dos ondas
-def suma_dos_ondas_vis(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
+def suma_dos_ondas(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
     # Generar los valores del tiempo (t)
     t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
 
