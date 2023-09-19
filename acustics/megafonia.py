@@ -35,7 +35,7 @@ def crear_onda(amplitud=2, frecuencia=2):
     return y
   
 
-def crea_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
+def crea_onda1_y_onda2_alavez_vis(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
     # Generar los valores del tiempo (t)
     t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
     
@@ -54,8 +54,8 @@ def crea_onda1_y_onda2_alavez(amplitud1, frecuencia1, offset1=0, amplitud2=1, fr
     plt.legend()
     plt.grid(True)
     plt.show()
-
-def suma_dos_ondas(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
+    
+def suma_dos_ondas_vis(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
     # Generar los valores del tiempo (t)
     t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
     
@@ -75,6 +75,18 @@ def suma_dos_ondas(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1
     plt.grid(True)
     plt.show()
 
+# Devuelve los puntos asociados a la función suma de dos ondas
+def suma_dos_ondas_vis(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
+    # Generar los valores del tiempo (t)
+    t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
+
+    # Generar las dos ondas sinusoidales usando la amplitud, frecuencia y offset dados
+    y1 = amplitud1 * np.sin(frecuencia1 * t + offset1)
+    y2 = amplitud2 * np.sin(frecuencia2 * t + offset2)
+
+    return y1+y2
+
+# devuelve el audio
 def escuchar_onda (y_data):
     return Audio (data=y_data, rate=44100)
 
