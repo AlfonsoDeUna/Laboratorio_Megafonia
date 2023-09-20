@@ -22,7 +22,6 @@ def crear_onda_vis(amplitud=2, frecuencia=2):
     plt.ylabel("Amplitud")
     plt.grid(True)
     plt.show()
-    return y
 
 # Crea una onda y ya está
 def crear_onda(amplitud=2, frecuencia=2):
