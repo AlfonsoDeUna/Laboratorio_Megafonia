@@ -7,7 +7,7 @@ from IPython.display import Audio
 
 
 # Crea una onda y la visualiza
-def crear_onda(amplitud=2, frecuencia=2):
+def crear_onda_vis(amplitud=2, frecuencia=2):
     # Generar los valores del tiempo (t)
     t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
     
