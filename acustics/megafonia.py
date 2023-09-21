@@ -5,14 +5,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from IPython.display import Audio
 
-# tasa de muestro de la señal
+# tasa de refresco
 rate = 44100
 
 # Crea una onda y la visualiza
-def crear_onda_vis(amplitud=2, frecuencia=2, duration=3):
+def crear_onda_vis(amplitud=2, frecuencia=2):
     # Generar los valores del tiempo (t)
-    #(0, duration, int(rate * duration), endpoint=False)
-    t = np.linspace(0,duration, int(rate * duration))  # Genera 1000 puntos entre 0 y 2*pi
+    t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
     
     # Generar la onda sinusoidal usando la amplitud y frecuencia dadas
     y = amplitud * np.sin(frecuencia * t)
@@ -27,9 +26,9 @@ def crear_onda_vis(amplitud=2, frecuencia=2, duration=3):
     plt.show()
 
 # Crea una onda y ya está
-def crear_onda(amplitud=2, frecuencia=2):
+def crear_onda(amplitud=2, frecuencia=2, duration=3):
     # Generar los valores del tiempo (t)
-    t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
+    t = np.linspace(0,duration, int(rate * duration), endpoint=False)  
     
     # Generar la onda sinusoidal usando la amplitud y frecuencia dadas
     y = amplitud * np.sin(frecuencia * t)
