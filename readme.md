@@ -45,8 +45,12 @@ import os
 from IPython.display import Audio
 from megafonia import generar_onda, escuchar_onda
 
-y = generar_onda(10,2000,3)
-
-display(Audio (data=y, rate=44100))
+display(Audio (generar_onda(10,5200,3), rate=44100))
 
 ```
+``` python 
+import os
+from IPython.display import Audio
+from megafonia import crea_onda1_y_onda2_alavez_vis
+
+crea_onda1_y_onda2_alavez_vis(2, 2, 0, 1, 5, 0)
