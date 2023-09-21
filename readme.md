@@ -41,6 +41,7 @@ escuchar_onda (onda): Podrás escuchar la onda que has creado.
 ``` python
 
 y = generar_onda(10,2000,3)
+
 display(Audio (data=y, rate=44100))
 
 ```
