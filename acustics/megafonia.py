@@ -26,7 +26,7 @@ def crear_onda_vis(amplitud=2, frecuencia=2):
     plt.show()
 
 # Crea una onda y ya está
-def crear_onda(amplitud=2, frecuencia=2, duration=3):
+def generar_onda(amplitud=2, frecuencia=2, duration=3):
     # Generar los valores del tiempo (t)
     t = np.linspace(0,duration, int(rate * duration), endpoint=False)  
     
