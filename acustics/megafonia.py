@@ -9,9 +9,10 @@ from IPython.display import Audio
 rate = 44100
 
 # Crea una onda y la visualiza
-def crear_onda_vis(amplitud=2, frecuencia=2):
+def crear_onda_vis(amplitud=2, frecuencia=2, duration=3):
     # Generar los valores del tiempo (t)
-    t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
+    #t = np.linspace(0, 2 * np.pi, 1000)  # Genera 1000 puntos entre 0 y 2*pi
+    t = np.linspace(0, duration, int(rate * duration), endpoint=False)  
     
     # Generar la onda sinusoidal usando la amplitud y frecuencia dadas
     y = amplitud * np.sin(frecuencia * t)
