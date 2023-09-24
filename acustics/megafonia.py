@@ -53,7 +53,25 @@ def generar_onda_offset (amplitud, frecuencia, offset=0, duration=3):
 
     return y
     
-  
+ #
+# Crea una onda con offset
+#
+def crear_onda_offset_vis (amplitud, frecuencia, offset=0, duration=3):
+    
+    #Generar los valores del tiempo con duración por defecto 3 segundos
+    t = np.linspace(0,duration, int(rate * duration), endpoint=False)  
+    
+    # Generar la onda sinusoidal usando la amplitud y frecuencia dadas
+    y = amplitud * np.sin(frecuencia * t + offset)
+
+    # Plot
+    plt.figure(figsize=(10, 6))
+    plt.plot(t, y)
+    plt.title(f"Onda Sinusoidal de {frecuencia} Hz con Amplitud {amplitud}")
+    plt.xlabel("Tiempo")
+    plt.ylabel("Amplitud")
+    plt.grid(True)
+    plt.show()
 
 def crea_onda1_y_onda2_alavez_vis(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
     # Generar los valores del tiempo (t)
