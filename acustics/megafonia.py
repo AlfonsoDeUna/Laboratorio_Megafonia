@@ -39,6 +39,20 @@ def generar_onda(amplitud=2, frecuencia=2, duration=3):
     y = amplitud * np.sin(frecuencia * t)
 
     return y
+
+#
+# Crea una onda con offset
+#
+def generar_onda_offset (amplitud, frecuencia, offset=0, duration=3):
+    
+    #Generar los valores del tiempo con duración por defecto 3 segundos
+    t = np.linspace(0,duration, int(rate * duration), endpoint=False)  
+    
+    # Generar la onda sinusoidal usando la amplitud y frecuencia dadas
+    y = amplitud * np.sin(frecuencia * t + offset)
+
+    return y
+    
   
 
 def crea_onda1_y_onda2_alavez_vis(amplitud1, frecuencia1, offset1=0, amplitud2=1, frecuencia2=1, offset2=0):
