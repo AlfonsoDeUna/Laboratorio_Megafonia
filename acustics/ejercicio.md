@@ -97,3 +97,20 @@ from megafonia import *
     - a) Combina una onda con su inversa (amplitud negativa). Escucha el resultado.
     - b) Describe lo que escuchas y explica por qué ocurre eso.
 
+21. **Espectro de una Onda**:
+    - a) Genera una onda de 2 de amplitud 440hz y 0 offset y con la función espectro_onda() y la misma con crear_onda_vis
+
+    ``` python
+        y = generar_onda(amplitud=2, frecuencia=440, duration=3)
+        crear_onda_vis (2,440,0.05)
+        espectro_onda(y)
+    
+    ```
+    - b) Las dos gráficas representan la misma señal u onda, qué representa cada gráfica y para qué nos puede servir generar el   espectro de una señal.
+    
+22. **Espectro de la suma de dos ondas**:
+
+    - a) Crea con la función suma_dos_ondas dos señales que suman y visualiza el espectro de la señal.
+    - b) Crea la misma suma pero esta vez que se visualicen como los ejercicios anteriores con suma_dos_ondas_vis.
+    - c) Qué información nos da el espectro de la señal.
+
