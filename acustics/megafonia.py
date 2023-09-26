@@ -140,7 +140,26 @@ def dibujar_onda(y_data):
     plt.grid(True)
     plt.show()
   
-
+def espectro_onda(y_data, rate=44100):
+    # Calcula la FFT de la señal
+    Y = np.fft.fft(y_data)
+    
+    # Calcula las frecuencias para los valores de Y
+    freqs = np.fft.fftfreq(len(Y), 1/rate)
+    
+    # Visualiza el espectro de amplitud
+    plt.figure(figsize=(10, 6))
+    
+    # Dibujamos solo la mitad positiva del espectro, ya que la FFT produce un espectro simétrico
+    # Usamos np.abs(Y) para obtener la magnitud de cada componente
+    plt.plot(freqs[:len(freqs)//2], np.abs(Y)[:len(Y)//2])
+    
+    plt.title("Espectro de Frecuencia")
+    plt.xlabel("Frecuencia (Hz)")
+    plt.ylabel("Amplitud")
+    plt.grid(True)
+    plt.show()
+  
 # Test de la función
 #crea_onda1_y_onda2_alavez(2, 2, 0, 1, 5, 0)     
 
